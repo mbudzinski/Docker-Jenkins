@@ -6,6 +6,9 @@ job("${project}") {
   scm {
       git("git://github.com/mbudzinski/${project}.git", branchName)
   }
+  triggers {
+     scm("*/5 * * * *")
+  }
   steps {
       maven('clean package')
   }
