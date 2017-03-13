@@ -4,7 +4,7 @@ def branchName = "master"
 
 job("${project}") {
   scm {
-      git("git://github.com/mbudzinski/{project}.git", branchName)
+      git("git://github.com/mbudzinski/${project}.git", branchName)
   }
   steps {
       maven('clean package')
