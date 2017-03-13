@@ -10,6 +10,6 @@ job("${project}") {
      scm("*/5 * * * *")
   }
   steps {
-      maven('clean package')
+      maven('clean package spring-boot:run')
   }
 }
